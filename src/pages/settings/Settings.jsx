@@ -33,11 +33,11 @@ export default function Settings() {
       console.log("filename", filename)
       updatedUser.profilePic = filename;
       try {
-        await axios.post("/upload/", data);
+        await axios.post("https://react-blog-api-six.vercel.app/api/upload/", data);
       } catch (err) {}
     }
     try {
-      await axios.put("/users/" + user._id, updatedUser);
+      await axios.put("https://react-blog-api-six.vercel.app/api/users/" + user._id, updatedUser);
       setSuccess(true);
       dispatch({ type: "UPDATE_SUCCESS", payload: updatedUser })
     } catch (err) {

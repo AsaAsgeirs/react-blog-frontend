@@ -18,7 +18,7 @@ export default function Singlepost() {
 
   useEffect(() => {
     const getPost = async () => {
-      const res = await axios.get("/posts/" + path);
+      const res = await axios.get("https://react-blog-api-six.vercel.app/api/posts/" + path);
       setPost(res.data);
       setTitle(res.data.title);
       setDesc(res.data.desc);
@@ -28,7 +28,7 @@ export default function Singlepost() {
 
   const handleDelete = async () => {
     try {
-    await axios.delete(`/posts/${post._id}`, {
+    await axios.delete(`https://react-blog-api-six.vercel.app/api/posts/${post._id}`, {
       data:{ username:user.username },
     });
     window.location.replace("/");
@@ -37,7 +37,7 @@ export default function Singlepost() {
 
   const handleUpdate = async () => {
     try {
-      await axios.put(`/posts/${post._id}`, {
+      await axios.put(`https://react-blog-api-six.vercel.app/api/posts/${post._id}`, {
         username: user.username,
         title, 
         desc,
