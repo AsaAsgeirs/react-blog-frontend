@@ -3,7 +3,7 @@ import {Link} from "react-router-dom"
 
 export default function Post({post}) {
   console.log("wrong", post)
-  const PF = "http://localhost:8000/images/"
+  const PF = "https://react-blog-frontend-ten.vercel.app/images/"
   return (
     <div className="post">
       {post.photo && <img className="postImg" src= {PF + post.photo} alt="" />}

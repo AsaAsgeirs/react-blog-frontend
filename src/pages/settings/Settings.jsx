@@ -14,7 +14,7 @@ export default function Settings() {
 
 
   
-  const PF = "http://localhost:8000/images/"
+  const PF = "https://react-blog-frontend-ten.vercel.app/images/"
 
   const handleSubmit = async (e) => {
     e.preventDefault();
